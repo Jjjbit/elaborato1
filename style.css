@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    background: white;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+
+}
+
+.top-row .all-sections {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.right > button, .left > button {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.blue-btn {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    cursor: pointer;
+}
+.center {
+    text-align: center;
+    flex: 1;
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+}
+.second-row {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+
+}
+
+
+.section-links a {
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+}
+.section-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+.trending-links span {
+    font-weight: bold;
+    color: #003366;
+    padding: 0 10px;
+}
+.trending-links a {
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+
+}
+hr {
+    width: 100%;
+    margin: 6px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+.hidden {
+    display: none;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background: #eee;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+    z-index: 2000;
+}
+.side-menu.right {
+    right: 0;
+    left: auto;
+    transform: translateX(100%);
+}
+.side-menu.open {
+    transform: translateX(0);
+}
+#searchBar {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    z-index: 900;
+}
+.mobile-only {
+    display: none;
+}
+.boston-herald-mobile {
+    display: none;
+}
+
+
+/* Responsive behavior */
+@media (max-width: 800px) {
+    .all-sections,
+    .subscribe-btn,
+    .login-btn,.third-row, .tt, .boston-herald-desktop {
+        display: none;
+    }
+    .mobile-only {
+        display: inline;
+    }
+    .boston-herald-mobile {
+        display: block;
+        font-size: 32px;
+        color: #003366;
+        text-align: center;
+        padding: 10px 0;
+        top: 0;
+    }
+
+}
+
+.scrolled .third-row, .scrolled .second-row {
+    display: none;
+}
+.scrolled .boston-herald-mobile {
+    display: block;
+    font-size: 32px;
+    color: #003366;
+    text-align: center;
+    padding: 10px 0;
+    top: 0;
+}
