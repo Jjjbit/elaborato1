@@ -4,7 +4,6 @@ body {
 }
 header {
     background: white;
-    border-bottom: 1px solid #ccc;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,9 +21,10 @@ header {
     font-weight: bold;
 }
 
-.right > button, .left > button {
+.top-row button {
     margin-left: 10px;
     font-weight: bold;
+    border: none;
 }
 .blue-btn {
     background: #003366;
@@ -32,21 +32,39 @@ header {
     border: none;
     padding: 6px 16px;
     cursor: pointer;
+
 }
-.center {
+.boston-herald-mobile {
     text-align: center;
     flex: 1;
     font-size: 32px;
     font-weight: bold;
     color: #003366;
 }
+
 .second-row {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 15px;
     margin-left: 15px;
     font-weight: bold;
+}
 
+.second-row .tt {
+    margin-left: 5px;
+    z-index: 1;
+}
+
+.boston-herald-desktop {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+    white-space: nowrap;
+    z-index: 0;
 }
 
 
@@ -55,6 +73,7 @@ header {
     text-decoration: none;
     padding: 12px;
 }
+
 .section-links{
     display: flex;
     justify-content: center;
@@ -62,10 +81,20 @@ header {
     font-weight: bold;
 
 }
+
+.trending-links{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: padding-left 0.3s ease;
+
+}
+
 .trending-links span {
     font-weight: bold;
     color: #003366;
     padding: 0 10px;
+    font-size: 14px;
 }
 .trending-links a {
     color: black;
@@ -119,7 +148,7 @@ hr {
 
 
 /* Responsive behavior */
-@media (max-width: 800px) {
+@media (max-width: 1040px) {
     .all-sections,
     .subscribe-btn,
     .login-btn,.third-row, .tt, .boston-herald-desktop {
@@ -130,23 +159,13 @@ hr {
     }
     .boston-herald-mobile {
         display: block;
-        font-size: 32px;
-        color: #003366;
-        text-align: center;
-        padding: 10px 0;
-        top: 0;
     }
 
 }
 
-.scrolled .third-row, .scrolled .second-row {
+header.scrolled .third-row, header.scrolled .second-row {
     display: none;
 }
-.scrolled .boston-herald-mobile {
+header.scrolled .boston-herald-mobile {
     display: block;
-    font-size: 32px;
-    color: #003366;
-    text-align: center;
-    padding: 10px 0;
-    top: 0;
 }

@@ -10,6 +10,7 @@ const secondRow = document.querySelector(".second-row");
 const thirdRow = document.querySelector(".third-row");
 const mobileTitle = document.querySelector(".boston-herald-mobile");
 const desktopTitle = document.querySelector(".boston-herald-desktop");
+const trending = document.querySelector('.trending-links');
 
 
 // Toggle left slide menu
@@ -42,9 +43,22 @@ searchBtn.addEventListener("click", () => {
 
 //scroll
 window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-
-    thirdRow.classList.toggle("scrolled", scrollTop > 100);
-    secondRow.classList.toggle("scrolled", scrollTop > 100);
-    mobileTitle.classList.toggle("scrolled", scrollTop > 100);
+    const isScolled = window.scrollY>100;
+    header.classList.toggle("scrolled", isScolled);
 });
+
+//controlla posizione di trending
+function updateTrendingPosition() {
+    const width = window.innerWidth;
+
+    if (width > 1400) {
+        trending.style.paddingLeft = '8%';
+    } else if (width > 1100) {
+        trending.style.paddingLeft = '5%';
+    } else {
+        trending.style.paddingLeft = '0%';
+    }
+}
+
+window.addEventListener('resize', updateTrendingPosition);
+window.addEventListener('load', updateTrendingPosition);
