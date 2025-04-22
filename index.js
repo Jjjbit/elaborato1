@@ -43,12 +43,12 @@ searchBtn.addEventListener("click", () => {
 
 //scroll
 window.addEventListener("scroll", () => {
-    const isScolled = window.scrollY>100;
+    const isScolled = window.scrollY>90;
     header.classList.toggle("scrolled", isScolled);
 });
 
 //controlla posizione di trending
-function updateTrendingPosition() {
+/*function updateTrendingPosition() {
     const width = window.innerWidth;
 
     if (width > 1400) {
@@ -61,4 +61,4 @@ function updateTrendingPosition() {
 }
 
 window.addEventListener('resize', updateTrendingPosition);
-window.addEventListener('load', updateTrendingPosition);
+window.addEventListener('load', updateTrendingPosition);*/

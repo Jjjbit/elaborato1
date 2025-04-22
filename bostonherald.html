@@ -8,6 +8,8 @@
 
     <title>Boston Herald - Boston news, sports, politics, opinion, entertainment</title>
     <link rel="stylesheet" href="style.css">
+    <link href="bootstrap/bootstrap-5.3.5-dist/bootstrap-5.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap/bootstrap-5.3.5-dist/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 <body>
@@ -52,9 +54,12 @@
           <a href="#">Lifestyle</a><a href="#">Multimedia/Video</a>
           <a href="#">Photo</a><a href="#">Obituaries</a>
         </div>
-        <hr />
+        <hr class="hr-third-row"/>
         <div class="trending-links">
-          <span>TRENDING:</span>
+            <div class="trending">
+                <span>TRENDING:</span>
+            </div>
+
           <a href="#">Read Howie Carr</a>
           <a href="#">Karen Read</a>
           <a href="#">Chris Flanagan</a>
@@ -66,7 +71,81 @@
 
 
     <main>
-      <p style="height:2000px;">Scroll down to see behavior change...</p>
+        <!-- first container -->
+        <div class="container-1">
+            <div class="row">
+                <!-- first column of first container-->
+                <div class="col-xs-12 col-md-6 col-lg-7 col1-c1">
+
+                    <!--top of first column of first container-->
+                    <div class="top-col1-c1">
+                        <h3 class="headline-title">Lorem Ipsum è un testo segnaposto utilizzato nel settore della...</h3>
+                        <img src="https://placehold.co/400x200" class="img-fluid"/>
+                        <p class="headline-subtitle"> Non c’è nessuno a cui piaccia il dolore in sé, che lo ricerchi e che voglia riceverlo, semplicemente perché è dolore...</p>
+                    </div>
+
+                    <!--middle of first column of first container-->
+                    <div class="middle-col1-c1">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <img src="https://placehold.co/400x200" class="img-fluid"/>
+                                <h4 class="title">Esistono innumerevoli variazioni dei passaggi del Lorem Ipsum...</h4>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <img src="https://placehold.co/400x200" class="img-fluid"/>
+                                <h4 class="title"> ma la maggior parte hanno subito delle variazioni del tempo...</h4>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <img src="https://placehold.co/400x200" class="img-fluid"/>
+                                <h4 class="title">Se si decide di utilizzare un passaggio del Lorem Ipsum...</h4>
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6">
+                                <img src="https://placehold.co/400x200" class="img-fluid"/>
+                                <h4 class="title">In genere, i generatori di testo segnaposto disponibili su internet tendono a ripetere paragrafi predefiniti...</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--bottom of first column of first container/promtions&spcials-->
+                    <div class="bottom-col1-c1">
+                        <h4 class="promotions-title">PROMOTIONS & SPECIALS</h4>
+                        <hr class="hr-promotions"/>
+                        <img src="https://placehold.co/150x100" />
+                    </div>
+                </div>
+
+                <!--  second column of first container-->
+                <div class=" col-xs-12 col-md-6 col-lg-5 col2-c1">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 latest-headline-list">
+                            <h4 class="latest-headlines-title">LATEST HEADLINES</h4>
+                            <hr class="hr-latest-headlines" />
+                            <div class="latest-headlines-list" >
+                                <div class="news-item"> Lorem Ipsum è un testo segnaposto utilizzato nel settore della...</div>
+                                <div class="news-item"> Lorem Ipsum è considerato il testo segnaposto standard sin dal... </div>
+                                <div class="news-item"> È sopravvissuto non solo a più di cinque secoli, ma...</div>
+                                <div class="news-item"> Fu reso popolare, negli anni ’60, con la diffusione dei...</div>
+                                <div class="news-item"> È universalmente riconosciuto che un lettore che osserva il layout...</div>
+                                <div class="news-item"> Lo scopo dell’utilizzo del Lorem Ipsum è che offre una...</div>
+                                <div class="news-item"> Molti software di impaginazione e di web design utilizzano Lorem...</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-6">
+                            <img src="https://placehold.co/150x200" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- second container -->
+        <div class="container-2"></div>
+
+        <!-- third container -->
+        <div class="container-3"></div>
+
+        <!-- fourth container -->
+        <div class="container-4"></div>
     </main>
 
 

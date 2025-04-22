@@ -13,7 +13,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px 16px;
-
+    /*background: cadetblue;*/
+    margin-left: 15px;
 }
 
 .top-row .all-sections {
@@ -39,16 +40,18 @@ header {
     flex: 1;
     font-size: 32px;
     font-weight: bold;
-    color: #003366;
+    color: #0056b3;
 }
 
 .second-row {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     margin-left: 15px;
     font-weight: bold;
+    background: aqua;
+
 }
 
 .second-row .tt {
@@ -60,9 +63,9 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 32px;
+    font-size: 35px;
     font-weight: bold;
-    color: #003366;
+    color: #0056b3;
     white-space: nowrap;
     z-index: 0;
 }
@@ -71,7 +74,8 @@ header {
 .section-links a {
     color: black;
     text-decoration: none;
-    padding: 12px;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .section-links{
@@ -86,14 +90,23 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
-    transition: padding-left 0.3s ease;
+    justify-content: center;
+    /*transition: padding-left 0.3s ease;*/
+    background: blueviolet;
+    margin: 15px;
 
 }
+/*.trending{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:aqua;
+}*/
 
 .trending-links span {
     font-weight: bold;
-    color: #003366;
-    padding: 0 10px;
+    color: #0056b3;
+    /*padding: 0 10px;*/
     font-size: 14px;
 }
 .trending-links a {
@@ -102,11 +115,12 @@ header {
     padding: 20px;
 
 }
-hr {
+.third-row .hr-third-row {
     width: 100%;
     margin: 6px 0;
     border: none;
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #777;
+    opacity: 1;
 }
 .hidden {
     display: none;
@@ -146,12 +160,53 @@ hr {
     display: none;
 }
 
+.headline-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.headline-subtitle {
+    color: #777;
+}
+.top-col1-c1, .middle-col1-c1{
+    margin-bottom: 2rem;
+}
+.bottom-col1-c1 {
+    color:orangered;
+    margin-bottom: 2rem;
+}
+.bottom-col1-c1 .hr-promotions{
+    border:orangered 1px solid;
+    opacity: 1;
+}
+
+.news-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+.latest-headlines-title {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+.latest-headlines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+}
+.latest-headline-list .hr-latest-headlines {
+    border: 1px solid  #0056b3;
+    opacity: 1;
+}
+
+
 
 /* Responsive behavior */
 @media (max-width: 1040px) {
     .all-sections,
     .subscribe-btn,
-    .login-btn,.third-row, .tt, .boston-herald-desktop {
+    .login-btn,.third-row, .second-row {
         display: none;
     }
     .mobile-only {
