@@ -96,12 +96,6 @@ header {
     margin: 15px;
 
 }
-/*.trending{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:aqua;
-}*/
 
 .trending-links span {
     font-weight: bold;
@@ -179,12 +173,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .container-1 {
     max-width: 1200px;
     padding: 0 15px;
-    background: green;
+    /*background: green;*/
     margin-bottom: 20px;
 }
 
@@ -208,6 +203,7 @@ main {
 
 .bottom-col1-c1 {
     color:orangered;
+    margin-bottom: 100px;
 }
 
 .bottom-col1-c1 .hr-promotions{
@@ -263,7 +259,7 @@ main {
 .container-2 {
     max-width: 1200px;
     padding: 0 15px;
-    background: #0dcaf0;
+    background: green;
     margin-bottom: 20px;
 }
 
@@ -314,27 +310,84 @@ main {
 .container-3{
     max-width: 1200px;
     padding: 0 15px;
-    background: green;
+    background: #0dcaf0;
     margin-bottom: 20px;
+}
+.section-block{
+    margin-bottom: 50px;
+}
+
+.section-title a{
+    color: gray;
+    text-decoration: none;
+}
+
+.container-3 a:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+.news-title a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.secondary-news-list a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:15px;
+}
+.container-3 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+.hr-section-block{
+    border: 1px solid  #0056b3;
+    opacity: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.container-4 {
+    max-width: 1200px;
+    padding: 0 15px;
+    /*max-height: 540px;*/
+    background: #0dcaf0;
+}
+
+.container-4 img{
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+.container-4 .photo{
+    margin-top: 40px;
 }
 
 /* Responsive behavior */
 @media (max-width: 1040px) {
     .all-sections,
     .subscribe-btn,
-    .login-btn,.third-row, .second-row {
+    .login-btn, .third-row, .second-row {
         display: none;
     }
-    .top-row{
+
+    .top-row {
         box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
     }
+
     .mobile-only {
         display: inline;
     }
+
     .boston-herald-mobile {
         display: block;
     }
-
 }
 
 header.scrolled .third-row, header.scrolled .second-row {
@@ -345,4 +398,32 @@ header.scrolled .boston-herald-mobile {
 }
 header.scrolled .top-row{
     box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width:800px){
+    .container-4 p{
+        display: none;
+    }
+}
+/* 576px-768px */
+@media (min-width:576px) and (max-width:768px){
+    .six-news{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .six-news .news{
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width:768px){
+    .six-news .news{
+        flex: 0 0 100%;
+    }
+}
+@media (max-width: 576px){
+    .six-news .news{
+        flex: 0 0 100%;
+    }
 }
