@@ -34,7 +34,9 @@ header {
     border: none;
     padding: 6px 16px;
     cursor: pointer;
-
+}
+.blue-btn:hover {
+    text-decoration: underline;
 }
 .boston-herald-mobile {
     text-align: center;
@@ -438,80 +440,72 @@ footer {
 .top-footer .footer-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
-    justify-content:center;
+    gap:calc(20px + 1vw);
     align-items: flex-start;
-    flex-direction:row;
+    flex-direction:row; /*default*/
+    justify-content: flex-start;
 }
+
 .item-footer-container{
-    flex:1 0 auto;
-}
-.footer-column {
-    flex: 1 1 220px;
+    flex:1 1 0;
+    min-width:200px;
 }
 
 .sign-contact-group {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    /*width: 5vw;*/
-
+    flex-direction: column; /*default*/
+    gap: calc(20px + 1vw);
+    flex: 1;
 }
-.sign-contact-group .footer-block {
-    flex: 1 0 auto;
 
-}
 
 .classifieds-business-subscribe-group{
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
-    /*flex-direction:row;*/
-    /*width:%;*/
-    /*width:40vw;*/
+    gap: calc(20px + 1vw);
+    flex-direction:row;
+    flex: 2;
 }
 
 .classifieds-business-group {
-    /*display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    flex-direction: column;*/
-    /*flex: 1 0 auto;*/
-    flex: 1 1  300px;
-    /*width: 30%;*/
-    /*width: 20vw;*/
-}
-.subscribe-block{
-    /*flex: 1 0 auto;*/
-    flex: 1 1 200px;
-    min-width: 200px;
-    min-height: 60px;
-    /*width: 30%;*/
-    font-weight: bold;
-    /*width: 20vw;*/
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    flex: 1 1 300px;
+}
+
+.subscribe-column {
+    flex: 1 1 auto;
+    width: 100%;
+}
+.subscribe-block {
+    flex: 1 1 auto;
+    justify-content: center;
     align-items: center;
 }
-.subscribe-btn {
-    min-width: 100px;
-    min-height: 40px;
-    padding: 6px 16px;
+.footer-column .subscribe-btn {
+    display:block;
+    padding: 8px 20px;
     font-size: 16px;
+    width:100%;
+    font-weight: bold;
 }
 .footer-block {
     border-top: 2px solid black;
     padding-top: 10px;
     margin-top: 10px;
-    width: 100%; /* 保证footer-block一样宽 */
+    width: 100%;
     min-height: 60px;
 }
 
 .footer-column {
-    min-width: 200px;
+    flex: 1 1 auto;
+    min-width: 150px;
+    max-width: 300px;
 }
+
 .footer-logo {
-    flex: 0 0 250px;
+    flex: 1 1 auto;
 }
 
 .footer-title a {
@@ -520,37 +514,31 @@ footer {
     font-weight: bold;
     font-size: 35px;
 }
-
-.footer-block {
-    border-top: 2px solid black;
-    padding-top: 10px;
-    margin-top: 10px;
-}
-
-
-.block-title a {
-    font-weight: bold;
+.footer-block a{
     font-size: 16px;
     text-decoration: none;
     color: black;
 }
+.block-title a {
+    font-weight: bold;
+}
 
-.footer-block p a {
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
+.block-title a:hover {
+    text-decoration: underline;
 }
 
 
 .bottom-footer {
-    padding: 0 20px 20px 20px;
+    /*padding: 0 20px 20px 20px;*/
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     font-size: 15px;
     border-top: 1px solid #dee2e6;
     margin-top: 20px;
     justify-content: flex-start;
+    align-items: center;
+    /*padding: 10px 0;*/
 }
 
 .bottom-footer a {
@@ -562,81 +550,106 @@ footer {
     color: #6c757d;
 }
 
-/* footer*/
-/* 900-1040px*/
-@media (min-width: 900px) and (max-width: 1040px) {
-    .sign-contact-group {
-        flex-direction: row;
+/* footer */
+/* <800px una colonna*/
+@media (max-width: 767px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: calc(20px + 1vw);
     }
-}
-/* <1040px */
-@media (max-width: 1040px) {
     .classifieds-business-subscribe-group {
         display: grid;
-        gap: calc(5px + 1vw);
+        grid-template-columns: repeat(1, 1fr);
+
     }
-}
-
-
-/* <900px */
-@media (max-width: 900px) {
-    /*.classifieds-business-subscribe-group {
-        flex-direction: column;
-        width: 100%;
-    }*/
-}
-
-@media (max-width: 600px) {
-    .footer-column {
+    .sign-contact-group {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .item-footer-container,
+    .subscribe-column,
+    .footer-column,
+    .footer-logo {
+        min-width: auto;
         flex: 1 1 100%;
     }
-}
-
-/* <800px */
-@media (max-width: 800px) {
-    .footer-container {
-        flex-direction: column;
-    }
-    .classifieds-business-subscribe-group {
-        flex-direction: column;
+    /*.subscribe-block {
         width: 100%;
-        gap: 30px;
-    }
-}
-
-/* 800px-900px */
-@media (min-width: 800px) and (max-width: 900px) {
-    /*.classifieds-business-subscribe-group {
-        flex-direction: column;
-    }*/
-    .subscribe-block {
-        width: 100%;
-        min-height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: 60px;
     }
     .subscribe-btn {
-        min-width: 120px;
+        width: auto;
+    }*/
+    .bottom-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .bottom-footer a, .bottom-footer span {
+        display: block;
+        width: 100%;
     }
 }
 
-/* 900-1040*/
-@media (min-width: 900px) and (max-width: 1040px) {
+/* 800px-900px  2 colonne*/
+@media (min-width: 768px) and (max-width: 959px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(20px + 1vw);
+    }
+    .sign-contact-group {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .classifieds-business-subscribe-group {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /*deepseek*/
+
+}
+
+/* 900-1040 tablet 4 colonne */
+@media (min-width: 960px) and (max-width: 1039px) {
     .sign-contact-group{
-        flex-direction: row;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(10px + 1vw);
     }
-    .classifieds-business-subscribe-group {
-        flex-direction:row;
+
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(20px + 1vw);
     }
+    .classifieds-business-subscribe-group{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-/* >1040px */
+/* >1400 computer 3 colonne*/
 @media (min-width: 1040px) {
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+    }
+    .sign-contact-group {
+        flex-direction: column;
+    }
     .classifieds-business-subscribe-group {
         flex-direction: row;
     }
+
+
 }
 
 
