@@ -47,6 +47,12 @@ window.addEventListener("scroll", () => {
     header.classList.toggle("scrolled", isScolled);
 });
 
+document.querySelectorAll('.collapsible .footer-title').forEach(title => {
+    title.addEventListener('click', () => {
+        const section = title.parentElement;
+        section.classList.toggle('open');
+    });
+});
 //controlla posizione di trending
 /*function updateTrendingPosition() {
     const width = window.innerWidth;
