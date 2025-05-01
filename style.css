@@ -14,8 +14,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 8px 16px;
-    /*background: cadetblue;*/
-    /*margin-left: 15px;*/
 }
 
 .top-row .all-sections {
@@ -53,8 +51,6 @@ header {
     padding: 20px;
     margin-left: 15px;
     font-weight: bold;
-    background: aqua;
-
 }
 
 .second-row .tt {
@@ -94,16 +90,16 @@ header {
     align-items: center;
     gap: 15px;
     justify-content: center;
-    /*transition: padding-left 0.3s ease;*/
-    background: blueviolet;
-    margin: 15px;
-
+    height: 30px;
 }
-
+.trending{
+    width:150px;
+    margin-left:5px;
+    background: coral;
+}
 .trending-links span {
     font-weight: bold;
     color: #0056b3;
-    /*padding: 0 10px;*/
     font-size: 14px;
 }
 
@@ -171,19 +167,47 @@ header {
     margin: 20px 0;
 }
 
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 .container-1 {
     max-width: 1200px;
+    width: 100%;
     padding: 0 15px;
-    /*background: green;*/
-    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.container-2-wrapper, .container-3-wrapper, .container-5-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-2, .container-3, .container-5 {
+    width: calc(100% - 250px);
+}
+
+.container-5{
+    margin-top:100px;
+}
+.container-4 {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (max-width: 766px) {
+    .container-2,
+    .container-3,
+    .container-5 {
+        width: 100%;
+    }
+
+    .container-2-wrapper,
+    .container-3-wrapper,
+    .container-5-wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .container-1 a{
@@ -327,7 +351,6 @@ main {
     .middle-col1-c1{
         display: grid;
         grid-template-columns:1fr;
-        /*grid-template-rows: repeat(4, 1fr);*/
         grid-template-rows:auto;
     }
     /* foto a sinistra, testo a destra */
@@ -451,18 +474,8 @@ main {
     object-fit: contain;
 }
 
-.container-2 {
-    max-width:1200px;
-    /*max-width: 980px;*/
-    padding: 0 15px;
-    background: green;
-    margin-bottom: 20px;
-    /*margin-left:100px;
-    align-self: flex-start;*/
-}
-
 .most-popular-title {
-    font-size: 20px;
+    font-size: 21px;
     color: #0056b3;
     margin-bottom: 0;
 }
@@ -508,13 +521,6 @@ main {
     font-size: 14px;
 }
 
-.container-3{
-    max-width: 1200px;
-    padding: 0 15px;
-    background: #0dcaf0;
-    margin-bottom: 20px;
-}
-
 .section-block{
     margin-bottom: 50px;
 }
@@ -557,14 +563,6 @@ main {
     margin-bottom: 20px;
 }
 
-.container-4 {
-    max-width: 1200px;
-    padding: 0 15px;
-    /*max-height: 540px;*/
-    background: #0dcaf0;
-    margin-bottom: 100px;
-}
-
 .container-4 img{
     width: 100%;
     height: auto;
@@ -582,9 +580,7 @@ main {
     font-weight: bold;
     font-size: 15px;
 }
-/*.six-news .news{
-    padding: 0 10px;
-}*/
+
 
 .container-4 a:hover {
     color: #0056b3;
@@ -599,17 +595,12 @@ main {
 }
 
 .container-4 .news{
-    margin-bottom:0px;
+    margin-bottom:0;
 }
 
-.container-5 {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin-bottom: 100px;
-}
 
 .container-5 .section-c5{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .container-5 a:hover {
