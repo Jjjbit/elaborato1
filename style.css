@@ -184,7 +184,7 @@ header {
 
 :root {
     --main-max-width: 1300px;
-    --container-narrow-max-width: 980px;
+    --container-narrow-max-width: 800px;
     --right-limit-width: 300px;
     --side-padding: 15px;
 }
@@ -231,7 +231,7 @@ main {
 }
 
 
-@media (max-width: 766px) {
+@media (max-width: 800px) {
     .container-narrow-wrapper {
         flex-direction: column;
     }
@@ -246,7 +246,7 @@ main {
     }
 }
 
-@media (max-width:992px){
+@media (max-width:1039px){
     .container-narrow-wrapper-3{
         flex-direction: column;
     }
@@ -334,7 +334,7 @@ main {
         margin-top:15px;
     }
 }
-@media (min-width:1040px) and (max-width:1279px){
+@media (min-width:1040px) and (max-width:1280px){
     .container-1{
         display: grid;
         grid-template-columns:1fr 1fr;
@@ -377,7 +377,7 @@ main {
     }
 }
 
-@media (min-width: 800px) and (max-width: 1039px) {
+@media (min-width: 800px) and (max-width: 1040px) {
     .container-1{
         display: grid;
         grid-template-columns:0.8fr 1fr;
@@ -417,7 +417,7 @@ main {
 
 }
 
-@media (min-width: 640px) and (max-width: 799px) {
+@media (min-width: 640px) and (max-width: 800px) {
     .top-col1-c1{
         display:grid;
         grid-template-columns:1fr 1.2fr;
@@ -443,7 +443,7 @@ main {
     }
 }
 
-@media (max-width:639px){
+@media (max-width:640px){
         .text-content .subtitle-related{
         display: none;
     }
@@ -623,11 +623,46 @@ main {
     justify-content: center;
     font-size: 14px;
 }
-
-.section-block{
-    margin-bottom: 50px;
+/*container-3*/
+@media(min-width: 1040px){
+    .container-3{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
 }
+@media (min-width: 800px) and (max-width: 1039px){
+    .container-3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+@media (min-width:640px) and (max-width: 800px){
+    .container-3{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .section-block .news-subtitle{
+        padding-bottom:15px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+@media (max-width: 640px) {
+    .container-3{
+        display: grid;
+        grid-template-columns: 1fr;
 
+    }
+    .section-block .news-subtitle{
+        padding-bottom:15px;
+        border-bottom: 1px solid #ccc;
+    }
+    .section-block{
+        margin-bottom: 50px;
+    }
+}
 .section-title a{
     color: gray;
     text-decoration: none;
@@ -758,7 +793,7 @@ main {
         grid-template-rows: repeat(3, auto);
     }
 }
-@media (max-width: 639px) {
+@media (max-width: 640px) {
     .photos-videos-container,.col1-c4,
     .six-news {
         display: block !important;
