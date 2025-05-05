@@ -333,6 +333,12 @@ main {
     .title{
         margin-top:15px;
     }
+    .sign-up{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media (min-width:1040px) and (max-width:1280px){
     .container-1{
@@ -375,9 +381,15 @@ main {
     .title{
         margin-left:15px;
     }
+    .sign-up{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-@media (min-width: 800px) and (max-width: 1040px) {
+@media (min-width: 800px) and (max-width: 1039px) {
     .container-1{
         display: grid;
         grid-template-columns:0.8fr 1fr;
@@ -414,6 +426,12 @@ main {
     .title{
         margin-top:15px;
     }
+    .sign-up{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
@@ -440,6 +458,11 @@ main {
     }
     .title{
         margin-top:15px;
+    }
+    .sign-up{
+        display: flex;
+        flex-direction:row;
+        gap: 5px;
     }
 }
 
@@ -472,7 +495,11 @@ main {
     .title{
         margin-left:15px;
     }
-
+    .sign-up{
+        display: flex;
+        flex-direction:row;
+        gap: 5px;
+    }
 }
 
 .middle-col1-c1{
@@ -537,10 +564,6 @@ main {
     padding: 20px;
 }
 .sign-up{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom:10px;
 }
 @media (max-width: 576px){
@@ -1206,7 +1229,7 @@ footer {
 
 /* header */
 /* <1040px */
-@media (max-width: 1040px) {
+@media (max-width: 1039px) {
     .all-sections,
     .subscribe-btn,
     .login-btn, .third-row, .second-row {
