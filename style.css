@@ -457,7 +457,7 @@ main {
         padding-bottom: 5px;
     }
     .title{
-        margin-top:15px;
+        margin-left:15px;
     }
     .sign-up{
         display: flex;
@@ -757,6 +757,7 @@ main {
 .col1-c4{
     gap:20px;
     padding:0;
+    margin-bottom: 15px;
 }
 .six-news {
     gap: 10px;
