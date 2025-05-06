@@ -181,11 +181,11 @@ header {
     height: 250px;
     margin: 20px 0;
 }
-
+/**/
 :root {
     --main-max-width: 1300px;
-    --container-narrow-max-width: 800px;
-    --right-limit-width: 300px;
+    --container-narrow-max-width: 900px;
+    --right-limit-width: 200px;
     --side-padding: 15px;
 }
 
@@ -1115,8 +1115,7 @@ main {
 }
 
 .event-card {
-    /*width: clamp(100px, 0.5vw, 150px);
-    flex: 0 0 auto;*/
+
     flex: 0 0 180px;
     max-width: 150px;
     min-width: 100px;
