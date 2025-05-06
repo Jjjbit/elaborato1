@@ -1042,14 +1042,23 @@ main {
     background:whitesmoke;
 
 }
-.events-section .title a{
-    text-decoration: none;
-    color: grey;
-    font-size: 20px;
-
+.events-section .top{
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    padding:0 20px;
+}
+.events-section .top button{
+    font-weight:normal;
+    color: rgba(21,26,19,0.87);
+    border:none;
+    padding:0;
 }
 .events-section .title{
-    padding-left:20px;
+    font-size: 20px;
+}
+.events-section .top-right{
+    font-size:13px;
 }
 .events-carousel {
     display: flex;
@@ -1061,7 +1070,7 @@ main {
     padding-left:0;
 }
 .events-wrapper {
-    overflow-x: scroll;
+    overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
 
@@ -1077,7 +1086,7 @@ main {
 
 .events-wrapper {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     gap: 10px;
 }
@@ -1086,7 +1095,6 @@ main {
     min-width: 200px;
     max-width: 220px;
     flex: 0 0 auto;
-
 }
 
 .event-card img {
@@ -1095,9 +1103,9 @@ main {
 }
 
 .carousel-prev, .carousel-next {
-    background: white;
+    background: whitesmoke;
     border: none;
-    font-size: 30px;
+    font-size: 20px;
     cursor: pointer;
 }
 .calendar-strip {
