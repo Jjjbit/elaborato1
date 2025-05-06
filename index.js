@@ -63,12 +63,25 @@ document.querySelectorAll('.footer-block.collapsible .block-title').forEach(titl
 });
 
 //upcoming events
-const wrapper = document.querySelector('.events-wrapper');
-document.querySelector('.carousel-prev').onclick = () => {
-    wrapper.scrollBy({ left: -220, behavior: 'smooth' });
-};
-document.querySelector('.carousel-next').onclick = () => {
-    wrapper.scrollBy({ left: 220, behavior: 'smooth' });
-};
+document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector(".events-wrapper");
+    const card = wrapper.querySelector(".event-card");
+    const btnNext = document.querySelector(".carousel-next");
+    const btnPrev = document.querySelector(".carousel-prev");
 
+    const scrollByVisibleCards = (direction = "next") => {
+        const wrapperWidth = wrapper.clientWidth;
+        const cardStyle = getComputedStyle(card);
+        const cardWidth = card.offsetWidth + parseInt(cardStyle.marginRight || 0);
+        const visibleCards = Math.floor(wrapperWidth / cardWidth);
+        const scrollAmount = cardWidth * visibleCards;
 
+        wrapper.scrollBy({
+            left: direction === "next" ? scrollAmount : -scrollAmount,
+            behavior: "smooth"
+        });
+    };
+
+    btnNext.addEventListener("click", () => scrollByVisibleCards("next"));
+    btnPrev.addEventListener("click", () => scrollByVisibleCards("prev"));
+});

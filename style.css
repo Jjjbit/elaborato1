@@ -226,9 +226,7 @@ main {
 }
 
 
-.container-narrow {
-    width: 100%;
-}
+
 
 
 @media (max-width: 799px) {
@@ -1040,7 +1038,7 @@ main {
 /*upcoming events*/
 .events-section{
     background:whitesmoke;
-
+    padding:0;
 }
 .events-section .top{
     display: flex;
@@ -1054,10 +1052,10 @@ main {
     border:none;
     padding:0;
 }
-.events-section .title{
-    font-size: 20px;
-}
 .events-section .top-right{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
     font-size:13px;
 }
 .events-carousel {
@@ -1070,10 +1068,14 @@ main {
     padding-left:0;
 }
 .events-wrapper {
+    display: flex;
     overflow-x: hidden;
     scrollbar-width: none;
-    -ms-overflow-style: none;
 
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+
+    gap: 10px;
 }
 .events-carousel {
     overflow-x: scroll;
@@ -1084,22 +1086,26 @@ main {
     display: none;
 }
 
-.events-wrapper {
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    gap: 10px;
-}
-
 .event-card {
-    min-width: 200px;
-    max-width: 220px;
+    width: clamp(150px, 0.5vw, 200px);
     flex: 0 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .event-card img {
     width: 100%;
-    height: auto;
+    height: 150px;
+    object-fit: cover;
+}
+.event-card .event-title{
+    font-weight: bold;
+    font-size:13px;
+}
+.event-card .event-location{
+    font-size: 12px;
+
 }
 
 .carousel-prev, .carousel-next {
@@ -1113,12 +1119,16 @@ main {
     justify-content: space-between;
     padding-left:20px;
     background: #f9f9f9;
+    white-space: nowrap;
+    overflow:hidden;
+    gap:5px;
 }
 
 .calendar-day {
+    flex: 0 0 auto;
     text-align: center;
     font-size: 14px;
-    flex: 1;
+
 }
 
 .calendar-day span {
