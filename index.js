@@ -61,3 +61,14 @@ document.querySelectorAll('.footer-block.collapsible .block-title').forEach(titl
         }
     });
 });
+
+//upcoming events
+const wrapper = document.querySelector('.events-wrapper');
+document.querySelector('.carousel-prev').onclick = () => {
+    wrapper.scrollBy({ left: -220, behavior: 'smooth' });
+};
+document.querySelector('.carousel-next').onclick = () => {
+    wrapper.scrollBy({ left: 220, behavior: 'smooth' });
+};
+
+

@@ -1037,6 +1037,87 @@ main {
         border-bottom: 1px solid #ccc;
     }
 }
+/*upcoming events*/
+.events-section{
+    background:whitesmoke;
+
+}
+.events-section .title a{
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+
+}
+.events-section .title{
+    padding-left:20px;
+}
+.events-carousel {
+    display: flex;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    align-items: center;
+    position: relative;
+    padding-left:0;
+}
+.events-wrapper {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+}
+.events-carousel {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.events-wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.events-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
+.event-card {
+    min-width: 200px;
+    max-width: 220px;
+    flex: 0 0 auto;
+
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-prev, .carousel-next {
+    background: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.calendar-strip {
+    display: flex;
+    justify-content: space-between;
+    padding-left:20px;
+    background: #f9f9f9;
+}
+
+.calendar-day {
+    text-align: center;
+    font-size: 14px;
+    flex: 1;
+}
+
+.calendar-day span {
+    display: block;
+    font-size: 16px;
+}
+
 
 /* footer */
 footer {
