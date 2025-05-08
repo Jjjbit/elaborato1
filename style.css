@@ -111,7 +111,36 @@ header {
     );
 }
 
+/* <1040px */
+@media (max-width: 1039px) {
+    .all-sections,
+    .subscribe-btn,
+    .login-btn, .third-row, .second-row {
+        display: none;
+    }
 
+    .top-row {
+        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
+    }
+
+    .mobile-only {
+        display: inline;
+    }
+
+    .boston-herald-mobile {
+        display: block;
+    }
+}
+
+header.scrolled .third-row, header.scrolled .second-row {
+    display: none;
+}
+header.scrolled .boston-herald-mobile {
+    display: block;
+}
+header.scrolled .top-row{
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
+}
 @media (orientation: landscape) and (max-width: 1366px) {
     .trending-links span {
         margin-left: 15px;
@@ -181,6 +210,7 @@ header {
     height: 250px;
     margin: 20px 0;
 }
+
 /**/
 :root {
     --main-max-width: 1300px;
@@ -316,6 +346,7 @@ main {
         white-space: nowrap;
     }
 }
+
 /*container-1*/
 .container-1{
     gap:20px;
@@ -884,6 +915,9 @@ main {
         grid-template-columns:repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
     }
+    .container-4 p{
+        display: none;
+    }
 }
 @media (max-width: 640px) {
     .photos-videos-container,.col1-c4,
@@ -899,6 +933,9 @@ main {
         padding-bottom:20px;
         width: 100%;
         margin-bottom: 10px;
+    }
+    .container-4 p{
+        display: none;
     }
 }
 
@@ -1037,7 +1074,7 @@ main {
     }
 }
 /*upcoming events*/
-/**/
+
 .events-section{
     background:whitesmoke;
     padding: 0;
@@ -1170,7 +1207,7 @@ main {
 /* footer */
 footer {
     box-shadow: inset 0 5px 10px -5px rgba(0, 0, 0, 0.25);
-    padding: 30px 20px 0;
+
     background-color: #f8f9fa;
 }
 .footer-container {
@@ -1186,7 +1223,6 @@ footer {
     flex:1 1 0;
     min-width:200px;
 }
-
 .top-footer span{
     display: none;
 }
@@ -1274,11 +1310,12 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    font-size: 15px;
+    font-size: 14px;
     border-top: 1px solid #dee2e6;
     margin-top: 20px;
     justify-content: flex-start;
     align-items: center;
+    padding: 10px 10px;
 }
 
 .bottom-footer a {
@@ -1352,6 +1389,14 @@ footer {
         margin:0;
         padding:0;
     }
+    .top-footer {
+        padding-left:5px;
+        padding-right:5px;
+        padding-top: 20px;
+    }
+    .footer-title a{
+        font-size: 50px;
+    }
 
 }
 /* una colonna*/
@@ -1387,6 +1432,10 @@ footer {
         display: block;
         width: 100%;
     }
+    .top-footer {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
 }
 
 /* 2 colonne*/
@@ -1403,6 +1452,11 @@ footer {
     .classifieds-business-subscribe-group {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+    }
+    .top-footer {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
     }
 
 }
@@ -1423,6 +1477,19 @@ footer {
         display:grid;
         grid-template-columns: repeat(2, 1fr);
     }
+    .top-footer {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+    }
+    .footer-column{
+        width:20vw;
+        min-width: 100px;
+        max-width: 300px;
+    }
+    .footer-title a{
+        font-size: clamp(14px, 2.6vw, 35px);
+    }
 
 }
 
@@ -1431,6 +1498,7 @@ footer {
     .footer-container {
         display: flex;
         flex-direction: row;
+        gap: calc(20px + 1vw);
     }
     .sign-contact-group {
         flex-direction: column;
@@ -1438,68 +1506,17 @@ footer {
     .classifieds-business-subscribe-group {
         flex-direction: row;
     }
-
-}
-
-
-/* header */
-/* <1040px */
-@media (max-width: 1039px) {
-    .all-sections,
-    .subscribe-btn,
-    .login-btn, .third-row, .second-row {
-        display: none;
-    }
-
-    .top-row {
-        box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
-    }
-
-    .mobile-only {
-        display: inline;
-    }
-
-    .boston-herald-mobile {
-        display: block;
+    .top-footer{
+        padding-left: 30px;
+        padding-right: 11vw;
+        padding-top: 30px;
     }
 }
 
-header.scrolled .third-row, header.scrolled .second-row {
-    display: none;
-}
-header.scrolled .boston-herald-mobile {
-    display: block;
-}
-header.scrolled .top-row{
-    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
-}
 
-@media (max-width:800px){
-    .container-4 p{
-        display: none;
-    }
-}
 
-/* 576px-768px */
-@media (min-width:576px) and (max-width:768px){
-    .six-news{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .six-news .news{
-        flex: 0 0 50%;
-    }
-}
 
-@media (min-width:768px){
-    .six-news .news{
-        flex: 0 0 100%;
-    }
-}
 
-@media (max-width: 576px){
-    .six-news .news{
-        flex: 0 0 100%;
-    }
-}
+
+
+
