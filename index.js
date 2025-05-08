@@ -85,3 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
     btnNext.addEventListener("click", () => scrollByVisibleCards("next"));
     btnPrev.addEventListener("click", () => scrollByVisibleCards("prev"));
 });
+
+//breaking news
+document.addEventListener("DOMContentLoaded", function () {
+    const closeButton = document.getElementById("X-icon");
+    const breakingNews = document.querySelector(".breaking-news");
+
+    closeButton.addEventListener("click", function () {
+        breakingNews.remove();
+    });
+});
