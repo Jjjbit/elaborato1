@@ -336,6 +336,9 @@ main {
     font-size: 20px;
 }
 @media (max-width: 800px){
+    .breaking-news{
+        gap:20px;
+    }
 
     .not-button .left{
         display: contents;
@@ -349,6 +352,11 @@ main {
     }
     .breaking-news-content a{
         display:contents;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+    .breaking-news-content span{
+        display: contents;
         white-space: normal;
         overflow-wrap: break-word;
     }
@@ -1361,8 +1369,6 @@ footer {
     display: block;
     color: #6c757d;
 }
-
-/* footer */
 @media (max-width: 639px) {
     .footer-logo {
         text-align: center;
