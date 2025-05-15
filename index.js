@@ -3,14 +3,7 @@ const menuBtn = document.getElementById("menuBtn");
 const userIcon = document.getElementById("userIcon");
 const leftMenu = document.getElementById("leftMenu");
 const rightMenu = document.getElementById("rightMenu");
-const searchBtn = document.getElementById("searchBtn");
-const searchBar = document.getElementById("searchBar");
 const header = document.getElementById("mainHeader");
-const secondRow = document.querySelector(".second-row");
-const thirdRow = document.querySelector(".third-row");
-const mobileTitle = document.querySelector(".boston-herald-mobile");
-const desktopTitle = document.querySelector(".boston-herald-desktop");
-const trending = document.querySelector('.trending-links');
 
 
 // Toggle left slide menu
@@ -37,9 +30,52 @@ document.addEventListener("click", (event) => {
 
 
 // Toggle search bar
-searchBtn.addEventListener("click", () => {
-    searchBar.classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBtn = document.getElementById("searchBtn");
+    const searchBar = document.getElementById("searchBar");
+    const overlay = document.getElementById("overlay");
+
+    if (searchBtn && searchBar && overlay) {
+        searchBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            if (searchBar.classList.contains("show")) {
+                searchBar.classList.remove("show");
+                overlay.classList.remove("active");
+                document.body.classList.remove("no-scroll");
+            } else {
+                searchBar.classList.add("show");
+                overlay.classList.add("active");
+                document.body.classList.add("no-scroll");
+            }
+        });
+
+
+        overlay.addEventListener("click", () => {
+            searchBar.classList.remove("show");
+            overlay.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+        });
+
+        document.addEventListener("click", () => {
+            searchBar.classList.remove("show");
+            overlay.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+        });
+        searchBar.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                searchBar.classList.remove("show");
+                overlay.classList.remove("active");
+                document.body.classList.remove("no-scroll");
+            }
+        });
+    }
 });
+
 
 //scroll
 window.addEventListener("scroll", () => {

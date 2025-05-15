@@ -15,8 +15,8 @@
 
 </head>
 <body>
-    <div id="leftMenu" class="side-menu">Left Menu Content</div>
-    <div id="rightMenu" class="side-menu right">Right Menu Content</div>
+    <div id="leftMenu" class="side-menu-left side-menu">Left Menu Content</div>
+    <div id="rightMenu" class="side-menu-right side-menu">Right Menu Content</div>
 
     <header id="mainHeader">
         <!-- First Row -->
@@ -33,6 +33,11 @@
                 <button id="searchBtn">🔍</button>
             </div>
         </div>
+        <div id="searchBar">
+            <input type="text" placeholder="Search...">
+            <button class="blue-btn">Search</button>
+        </div>
+        <div id="overlay"></div>
 
         <!-- Second Row -->
         <div class="second-row">
@@ -817,12 +822,6 @@
             <span>Copyright © 2025 MediaNews Group</span>
         </div>
     </footer>
-
-
-    <!-- Optional search bar -->
-    <div id="searchBar" class="hidden">
-      <input type="text" placeholder="Search..." />
-    </div>
 
     <script src="index.js"></script>
 </body>
