@@ -117,7 +117,9 @@ header {
     .login-btn, .third-row, .second-row {
         display: none;
     }
-
+    header{
+        margin-right:0;
+    }
     .top-row {
         box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.25);
         position: relative;
@@ -228,7 +230,7 @@ header.scrolled .top-row{
 #overlay {
     display: none;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
     right: 0;
     bottom: 0;
