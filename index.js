@@ -4,36 +4,119 @@ const userIcon = document.getElementById("userIcon");
 const leftMenu = document.getElementById("leftMenu");
 const rightMenu = document.getElementById("rightMenu");
 const header = document.getElementById("mainHeader");
+const overlay = document.getElementById("overlay");
+const boston= document.querySelector(".boston-herald-mobile")
+const topRow = document.querySelector(".top-row");
 
+// open and close left slide menu
+document.addEventListener("DOMContentLoaded", function () {
+    function openLeftMenu() {
+        leftMenu.classList.add("open");
+        overlay.classList.add("active");
+        document.body.classList.add("no-scroll");
+        boston.classList.add("show");
+    }
 
-// Toggle left slide menu
-menuBtn.addEventListener("click", () => {
-    leftMenu.classList.toggle("open");
-});
-// Close left menu when clicking outside
-document.addEventListener("click", (event) => {
-    if (!leftMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+    function closeLeftMenu() {
         leftMenu.classList.remove("open");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+        boston.classList.remove("show");
     }
+
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (leftMenu.classList.contains("open")) {
+            closeLeftMenu();
+        } else {
+            openLeftMenu();
+        }
+    });
+
+    overlay.addEventListener("click", closeLeftMenu);
+
+    leftMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (
+            leftMenu.classList.contains("open") &&
+            !leftMenu.contains(event.target) &&
+            !menuBtn.contains(event.target)
+        ) {
+            closeLeftMenu();
+        }
+    });
 });
 
-// Toggle right slide menu
-userIcon.addEventListener("click", () => {
-    rightMenu.classList.toggle("open");
+document.addEventListener("DOMContentLoaded", function () {
+    const blockTitles = document.querySelectorAll(".block-title-side span");
+
+    blockTitles.forEach(title => {
+        title.addEventListener("click", function () {
+
+            const hiddenContent = this.parentElement.nextElementSibling;
+
+            if (hiddenContent && hiddenContent.classList.contains("hidden-content")) {
+                hiddenContent.classList.toggle("show");
+
+                if (hiddenContent.classList.contains("show")) {
+                    this.innerHTML = "<i class=\"bi bi-chevron-down\"></i>";
+                } else {
+                    this.innerHTML = ">";
+                }
+            }
+        });
+    });
 });
-// Close right menu when clicking outside
-document.addEventListener("click", (event) => {
-    if (!rightMenu.contains(event.target) && !userIcon.contains(event.target)) {
+// open and close right slide menu
+document.addEventListener("DOMContentLoaded", function () {
+    function openRightMenu() {
+        rightMenu.classList.add("open");
+        overlay.classList.add("active");
+        document.body.classList.add("no-scroll");
+        topRow.classList.add("modify");
+    }
+
+    function closeRightMenu() {
         rightMenu.classList.remove("open");
+        overlay.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+        topRow.classList.remove("modify");
     }
+
+    userIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (rightMenu.classList.contains("open")) {
+            closeRightMenu();
+        } else {
+            openRightMenu();
+        }
+    });
+
+    overlay.addEventListener("click", closeRightMenu);
+
+    rightMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (
+            rightMenu.classList.contains("open") &&
+            !rightMenu.contains(event.target) &&
+            !userIcon.contains(event.target)
+        ) {
+            closeRightMenu();
+        }
+    });
 });
 
-
-// Toggle search bar
+// open and close search bar
 document.addEventListener("DOMContentLoaded", function () {
     const searchBtn = document.getElementById("searchBtn");
     const searchBar = document.getElementById("searchBar");
-    const overlay = document.getElementById("overlay");
+
 
     if (searchBtn && searchBar && overlay) {
         searchBtn.addEventListener("click", (event) => {
@@ -43,10 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 searchBar.classList.remove("show");
                 overlay.classList.remove("active");
                 document.body.classList.remove("no-scroll");
+                boston.classList.remove("show")
             } else {
                 searchBar.classList.add("show");
                 overlay.classList.add("active");
                 document.body.classList.add("no-scroll");
+                boston.classList.add("show");
             }
         });
 
@@ -55,12 +140,14 @@ document.addEventListener("DOMContentLoaded", function () {
             searchBar.classList.remove("show");
             overlay.classList.remove("active");
             document.body.classList.remove("no-scroll");
+            boston.classList.remove("show");
         });
 
         document.addEventListener("click", () => {
             searchBar.classList.remove("show");
             overlay.classList.remove("active");
             document.body.classList.remove("no-scroll");
+            boston.classList.remove("show");
         });
         searchBar.addEventListener("click", (event) => {
             event.stopPropagation();
@@ -71,18 +158,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 searchBar.classList.remove("show");
                 overlay.classList.remove("active");
                 document.body.classList.remove("no-scroll");
+                boston.classList.remove("show");
             }
         });
     }
 });
 
-
 //scroll
 window.addEventListener("scroll", () => {
-    const isScolled = window.scrollY>90;
-    header.classList.toggle("scrolled", isScolled);
+    const isScrolled = window.scrollY>90;
+    header.classList.toggle("scrolled", isScrolled);
 });
 
+//footer
 document.querySelectorAll('.footer-block.collapsible .block-title').forEach(title => {
     title.addEventListener('click', function(){
         const footerBlock = this.closest('.footer-block');
