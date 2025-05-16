@@ -122,6 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnPrev.addEventListener("click", () => scrollByVisibleCards("prev"));
 });
 
+function handleClick() {
+    alert("You clicked Upcoming Events!");
+}
+
 //breaking news
 document.addEventListener("DOMContentLoaded", function () {
     const closeButton = document.getElementById("X-icon");

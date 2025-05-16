@@ -1160,14 +1160,27 @@ main {
     .events-section .top{
         padding:0;
     }
-
-
     .calendar-strip {
         padding: 0 5%;
         gap: 2px;
     }
     .events-section .title{
-        margin-left:0;
+    }
+    .events-section .top-right span{
+        display: none;
+    }
+}
+@media (min-width: 441px) and (max-width:620px){
+    .events-section .top{
+        column-gap: 20px;
+    }
+}
+@media (max-width: 441px) {
+    .events-section .top-right span{
+        display: none;
+    }
+    .events-section .top{
+        column-gap: 20px;
     }
 
 }
@@ -1177,11 +1190,24 @@ main {
     align-items:baseline;
     padding:0 20px;
 }
+.events-section .title{
+    font-weight:normal;
+    color: rgba(21,26,19,0.87);
+    margin-left:0;
+    margin-top:0;
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 .events-section .top button{
     font-weight:normal;
     color: rgba(21,26,19,0.87);
-    border:none;
+    all: unset;
     padding:0;
+    white-space: nowrap;
 }
 .events-section .top-right{
     display: flex;
