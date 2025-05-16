@@ -195,10 +195,6 @@ header.scrolled .top-row{
     transition: transform 0.3s;
     z-index: 2000;
 }
-.side-menu .top-menu{
-    padding:10px 5px 50px 20px;
-    border-bottom: 1px solid black;
-}
 .side-menu .bottom-menu{
     display: flex;
     flex-direction: column;
@@ -212,6 +208,9 @@ header.scrolled .top-row{
 .side-menu .bottom-menu button{
     width: 100%;
 }
+.side-menu.open {
+    transform: translateX(0);
+}
 
 /*left side menu*/
 .side-menu-left{
@@ -224,7 +223,10 @@ header.scrolled .top-row{
     flex-direction: column;
     overflow-y: auto;
 }
-
+.side-menu-left .top-menu{
+    padding:10px 5px 50px 20px;
+    border-bottom: 1px solid black;
+}
 .side-menu-left .content{
     display: flex;
     flex-direction: column;
@@ -298,9 +300,20 @@ header.scrolled .top-row{
     left: auto;
     transform: translateX(100%);
 }
-
-.side-menu.open {
-    transform: translateX(0);
+.side-menu-right .top-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding:20px 0 350px 20px;
+    font-weight: bold;
+}
+.side-menu-right .top-menu a{
+    color: black;
+    text-decoration: none;
+}
+.side-menu-right .bottom-menu{
+    padding-top:0;
+    padding-bottom:50px;
 }
 
 #searchBar {
